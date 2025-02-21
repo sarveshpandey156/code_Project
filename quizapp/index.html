@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-page">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required />
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+      
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-error"></p>
+  </div>
+  <div id="quiz-page" class="hidden">
+    <h1>Quiz</h1>
+    <div id="question-container">
+      <p id="question-text"></p>
+      <ul id="options-list"></ul>
+    </div>
+    <p id="timer">Time Left: <span id="time-left">10</span> seconds</p>
+  </div>
+
+  <div id="result-page" class="hidden">
+    <h1>Quiz Results</h1>
+    <p id="result-text"></p>
+    <button onclick="restartQuiz()">Restart Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
